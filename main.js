@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initAccordion; });\nfunction initAccordion() {\n  const accodionList = document.querySelectorAll('[data-anime=\"accodion\"] dt');\n  const activeClass = 'ativo';\n\n  function activeAccordion() {\n    this.classList.toggle(activeClass);\n    this.nextElementSibling.classList.toggle(activeClass);\n  }\n  if (accodionList.length) {\n    accodionList[0].classList.add(activeClass);\n    accodionList[0].nextElementSibling.classList.add(activeClass);\n    accodionList.forEach((item) => {\n      item.addEventListener('click', activeAccordion);\n    });\n  }\n}\n\n\n//# sourceURL=webpack:///./js/modules/accordion.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initAccordion; });\nfunction initAccordion() {\n  const accodionList = document.querySelectorAll('[data-anime=\"accodion\"] dt');\n  const activeClass = 'ativo';\n\n  function activeAccordion() {\n    this.classList.toggle(activeClass);\n    this.nextElementSibling.classList.toggle(activeClass);\n  }\n  if (accodionList.length) {\n    accodionList[0].classList.add(activeClass);\n    accodionList[0].nextElementSibling.classList.add(activeClass);\n    accodionList.forEach((item) => {\n      item.addEventListener('click', activeAccordion);\n    });\n  }\n}\nconsole.log('Teste');\n\n\n//# sourceURL=webpack:///./js/modules/accordion.js?");
 
 /***/ }),
 

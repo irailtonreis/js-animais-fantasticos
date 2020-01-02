@@ -1,7 +1,6 @@
 {
   "name": "animais-fantasticos",
   "version": "1.0.0",
-  "description": "Projeto destinado a praticar conceitos do javascrit ES6",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -11,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/irailtonreis/animais-fantasticos.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/irailtonreis/animais-fantasticos/issues"
