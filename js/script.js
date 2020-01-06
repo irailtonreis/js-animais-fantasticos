@@ -6,7 +6,7 @@ import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
-import initFecthAnimais from './modules/fecth-animais.js';
+import fecthAnimais from './modules/fecth-animais.js';
 import initFecthBitcoin from './modules/fecth-bitcoin.js';
 import initAnimacaoScroll from './modules/scroll-animacao.js';
 
@@ -31,6 +31,6 @@ console.log(tooltip);
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initFecthAnimais();
+fecthAnimais('../../animaisapi.json', '.numeros-grid');
 initFecthBitcoin();
 initAnimacaoScroll();
