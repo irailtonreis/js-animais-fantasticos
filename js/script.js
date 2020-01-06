@@ -7,7 +7,7 @@ import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import fecthAnimais from './modules/fecth-animais.js';
-import initFecthBitcoin from './modules/fecth-bitcoin.js';
+import fecthBitcoin from './modules/fecth-bitcoin.js';
 import initAnimacaoScroll from './modules/scroll-animacao.js';
 
 
@@ -32,5 +32,5 @@ initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
 fecthAnimais('../../animaisapi.json', '.numeros-grid');
-initFecthBitcoin();
+fecthBitcoin('https://www.blockchain.com/ticker', '.btc-preco');
 initAnimacaoScroll();
