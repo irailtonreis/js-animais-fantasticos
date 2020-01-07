@@ -1,33 +1,40 @@
-// const agora = new Date();
-// console.log(agora.getMonth());
 
-// const futuro = new Date('Dec 31 2019 23:59');
-// console.log(futuro);
+export default class Funcionamento {
+  constructor(funcionamento, activeClass) {
+    this.funcionamento = document.querySelector(funcionamento);
+    this.activeClass = activeClass;
+  }
 
-// function transformarDias(tempo){
-//   return tempo / (24 * 60 * 60 * 1000);
-// }
+  dadosFuncionamento() {
+    this.diasSemana = this.funcionamento.dataset.semana.split(',').map(Number);
+    this.horarioSemana = this.funcionamento.dataset.horario.split(',').map(Number);
+  }
 
-// const diasAgora = transformarDias(agora.getTime());
-// const diasFuturo = transformarDias(futuro.getTime());
-// console.log( );
-// console.log(Math.floor(diasFuturo - diasAgora));
+  dadosAgora() {
+    this.dataAgora = new Date();
+    this.diaAgora = this.dataAgora.getDay();
+    this.horarioAgora = this.dataAgora.getUTCHours() - 3;
+  }
 
-export default function initFuncionamento() {
-  const funcionamento = document.querySelector('[data-semana]');
+  estaAberto() {
+    const semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
+    const horarioAberto = (this.horarioAgora >= this.horarioSemana[0]
+    && this.horarioAgora < this.horarioSemana[1]);
+    return semanaAberto && horarioAberto;
+  }
 
-  const diasSemana = funcionamento.dataset.semana.split(',').map(Number);
-  const horarioSemana = funcionamento.dataset.horario.split(',').map(Number);
+  ativaAberto() {
+    if (this.estaAberto()) {
+      this.funcionamento.classList.add(this.activeClass);
+    }
+  }
 
-  const dataAgora = new Date();
-  const diaAgora = dataAgora.getDay();
-  const horarioAgora = dataAgora.getHours();
-
-  const semanaAberto = diasSemana.indexOf(diaAgora) !== -1;
-
-  const horarioAberto = (horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1]);
-
-  if (semanaAberto && horarioAberto) {
-    funcionamento.classList.add('aberto');
+  init() {
+    if (this.funcionamento) {
+      this.dadosFuncionamento();
+      this.dadosAgora();
+      this.ativaAberto();
+    }
+    return this;
   }
 }
