@@ -39,5 +39,5 @@ const funcionamento = new Funcionamento('[data-semana]', 'aberto');
 funcionamento.init();
 
 
-fecthAnimais('../../animaisapi.json', '.numeros-grid');
+fecthAnimais('./animaisapi.json', '.numeros-grid');
 fecthBitcoin('https://www.blockchain.com/ticker', '.btc-preco');
