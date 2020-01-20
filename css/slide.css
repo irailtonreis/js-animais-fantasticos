@@ -23,6 +23,13 @@
   width: 800px;
   height: 75vh; 
 }
+
+@media(max-width:1024px) {
+  .slide li img {
+    height: 50vh;
+  }
+}
+
 .slide li{
   flex-shrink: 0;
   width: 80vw;
